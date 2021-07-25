@@ -2,6 +2,8 @@
 pointcloud viewer on browser via websocket.
 
 # RUN SERVER
+Prepare a PCD file for anything,
+Put `server/data.pcd`.
 
 ```bash
 $ cd server
