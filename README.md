@@ -13,4 +13,11 @@ $ cmake ..
 $ make
 $ ./server 0.0.0.0 8080
 ```
+# RUN CLIENT
+Before run client, please run server.
 
+```bash
+$ cd client
+$ npm install
+$ npm start
+```
