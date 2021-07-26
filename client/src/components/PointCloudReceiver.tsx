@@ -36,6 +36,9 @@ const PointCloudReceiver: React.FC<PointCloudReceiverProps> = ({ websock }) => {
         setPoints(dataFromServer.points as pointsType);
       }
     };
+    websock.onerror = (err: Error) => {
+      console.log('Connection error', err);
+    };
 
     return () => {
       websock.close();
