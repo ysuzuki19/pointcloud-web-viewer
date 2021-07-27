@@ -1,5 +1,5 @@
-server/data.pcd
 build/
 .vscode/
 
 *.mkv
+*.pcd

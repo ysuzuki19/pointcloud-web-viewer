@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.16)
+project(streamer)
+add_executable( streamer streamer.cpp )
+
+# FIND_PACKAGE( Boost 1.40 COMPONENTS program_options REQUIRED )
+find_package(Boost REQUIRED COMPONENTS system thread)
+if (BOOST_FOUND)
+	include_directories( ${Boost_INCLUDE_DIR} )
+	target_link_libraries( streamer ${Boost_LIBRARIES} )
+endif()
+
+find_package( PCL 1.8 REQUIRED )
+if (PCL_FOUND)
+	include_directories( ${PCL_INCLUDE_DIRS})
+	add_definitions( ${PCL_DEFINITIONS} )
+	link_directories( ${PCL_LIBRARY_DIRS} )
+	target_link_libraries( streamer ${PCL_LIBRARIES} )
+endif()

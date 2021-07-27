@@ -5,10 +5,10 @@ pointcloud viewer on browser via websocket.
 # RUN SERVER
 
 Prepare a PCD file for anything,
-Put `server/data.pcd`.
+Put `server/echo/data.pcd`.
 
 ```bash
-$ cd server
+$ cd server/echo
 $ mkdir build
 $ cd build
 $ cmake ..
@@ -28,4 +28,23 @@ $ npm start
 
 # DEMO VIDEO
 
+## Echo
+
 ![files](./demo/point-cloud-web-viewer-simple-demo.gif)
+
+## Stream
+
+![files](./demo/point-cloud-web-viewer-stream-demo.gif)
+
+# RUN STREAM SERVER
+
+Prepare PCD files and put `server/streamer/pcds/<filenam>.pcd`.
+
+```bash
+$ cd server/streamer
+$ mkdir build
+$ cd build
+$ cmake ..
+$ make
+$ ./server 0.0.0.0 8080
+```
