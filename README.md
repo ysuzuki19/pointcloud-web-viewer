@@ -1,8 +1,8 @@
-# pointcloud-web-viewer
+# Point Cloud Web Viewer
 
 pointcloud viewer on browser via websocket.
 
-# RUN SERVER
+# Run Server
 
 Prepare a PCD file for anything,
 Put `server/echo/data.pcd`.
@@ -16,7 +16,7 @@ $ make
 $ ./server 0.0.0.0 8080
 ```
 
-# RUN CLIENT
+# Run Client
 
 Before run client, please run server.
 
@@ -26,7 +26,7 @@ $ npm install
 $ npm start
 ```
 
-# DEMO VIDEO
+# Demo
 
 ## Echo
 
@@ -36,7 +36,7 @@ $ npm start
 
 ![files](./demo/point-cloud-web-viewer-stream-demo.gif)
 
-# RUN STREAM SERVER
+# Run Stream Server
 
 Prepare PCD files and put `server/streamer/pcds/<filenam>.pcd`.
 
